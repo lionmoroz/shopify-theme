@@ -1,14 +1,16 @@
-<div class="sudheader">
-  <div class="sudheader_menu">
-    {%- for block in section.blocks -%}
-      <div class="menu__item">
-        <span class="icon icon-icon-car"></span>
-        <p class="menu__title">{{ block.settings.text | escape }}
-        </p>
-      </div>
-    {%- endfor -%}
+{% if section.settings != blank %}
+  <div class="sudheader">
+    <div class="sudheader_menu">
+      {%- for block in section.blocks -%}
+        <div class="menu__item">
+          <span class="icon icon-icon-car"></span>
+          <p class="menu__title">{{ block.settings.text | escape }}
+          </p>
+        </div>
+      {%- endfor -%}
+    </div>
   </div>
-</div>
+{% endif %}
 
 
 
@@ -20,13 +22,22 @@
     "class": "subheader",
     "settings": [
       {
-        "type": "text",
-        "id": "slider_text",
         "label": "Subheader"
       }
     ],
     "blocks": [
-      {}
+      {
+        "name": "Text block",
+        "type": "text_block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text_field",
+            "label": "Text field",
+            "defualt": "Some info"
+          }
+        ]
+      }
     ],
     "presets": [
       {
