@@ -215,13 +215,13 @@
           "4c8f5c94-ae3a-44e6-b1e7-234b801e2c10": {
             "type": "text_block",
             "settings": {
-              "text_field": "Some info"
+              "text_field": ""
             }
           },
           "345c931c-d07f-43d7-b642-f0eccd120529": {
             "type": "text_block",
             "settings": {
-              "text_field": "Some info"
+              "text_field": ""
             }
           }
         },
