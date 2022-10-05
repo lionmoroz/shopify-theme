@@ -43,8 +43,9 @@
     {{content_for_layout}}
 
 
-    <script src="{{'slick.min.js' | asset_url}}"></script>
-    <script src="{{'libs.js' | asset_url}}"></script>
-    <script src="{{'app.js' | asset_url}}" defer="defer"></script>
+
+    {{'slick.min.js' | asset_url | script_tag}}
+    {{'libs.js' | asset_url | script_tag}}
+    {{'app.js' | asset_url | script_tag}}
   </body>
 </html>
