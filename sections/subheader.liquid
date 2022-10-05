@@ -1,0 +1,43 @@
+<div class="sudheader">
+  <div class="sudheader_menu">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        <div class="menu__item">
+          <span class="icon icon-icon-car"></span>
+          <p class="menu__title">{{ block.settings.text | escape }}
+          </p>
+        </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Subheader",
+    "max_blocks": 9,
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "announcement.text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "default": "Welcome to our store",
+            "label": "subheader.blocks.announcement.settings.text"
+          }
+        ]
+      }
+    ],
+    "default": {
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  }
+{% endschema %}
