@@ -34,6 +34,7 @@
     {{ 'style.css' | asset_url | stylesheet_tag }}
     {{ 'libs.css' | asset_url | stylesheet_tag }}
     <link href="{{ 'svgfont.ttf' | asset_url }}" type="font">
+    {{'app.js' | asset_url | script_tag}}
 
   </head>
   <body>
