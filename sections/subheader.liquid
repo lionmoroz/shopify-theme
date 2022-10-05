@@ -1,13 +1,11 @@
 <div class="sudheader">
   <div class="sudheader_menu">
     {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        <div class="menu__item">
-          <span class="icon icon-icon-car"></span>
-          <p class="menu__title">{{ block.settings.text | escape }}
-          </p>
-        </div>
-      {%- endcase -%}
+      <div class="menu__item">
+        <span class="icon icon-icon-car"></span>
+        <p class="menu__title">{{ block.settings.text | escape }}
+        </p>
+      </div>
     {%- endfor -%}
   </div>
 </div>
@@ -17,19 +15,22 @@
 {% schema %}
   {
     "name": "Subheader",
-    "max_blocks": 9,
-    "blocks": [
+    "tag": "section",
+    "max_blocks": 6,
+    "class": "subheader",
+    "settings": [
       {
-        "type": "announcement",
-        "name": "announcement.text",
-        "settings": [
-          {
-            "type": "text",
-            "id": "text",
-            "default": "Welcome to our store",
-            "label": "subheader.blocks.announcement.settings.text"
-          }
-        ]
+        "type": "text",
+        "id": "slider_text",
+        "label": "Subheader"
+      }
+    ],
+    "blocks": [
+      {}
+    ],
+    "presets": [
+      {
+        "name": "Subheader"
       }
     ],
     "default": {
